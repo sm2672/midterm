@@ -13,7 +13,7 @@ class AboutTest extends TestCase
      *
      * @return void
      */
-    public function testExample()
+    public function testAboutPage()
     {
         $response = $this->get('/about');
 
