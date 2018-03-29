@@ -28,3 +28,4 @@ Route::get('/contact', 'PagesController@contact')->name('contact');
 
 Route::post('/contact', 'PagesController@save')->name('contact.save');
 
+Route::get('/about', 'PagesController@about')->name('about');
