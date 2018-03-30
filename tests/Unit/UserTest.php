@@ -5,6 +5,8 @@ namespace Tests\Unit;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use PHPUnit\Framework\Constraint\IsType;
+
 use App\User;
 
 class UserTest extends TestCase
@@ -43,7 +45,12 @@ class UserTest extends TestCase
 
 
     }
+    public function testCount() {
+        $users = User::All();
+        $usernumber = $users->count();
 
+        $this->assertequals(51,$usernumber);
+    }
 }
 
 
