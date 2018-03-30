@@ -18,9 +18,20 @@ class UserTest extends TestCase
     {
         $user = new User();
         $user->name = 'Lionel Messi';
-        $user->email = 'Messi@fifa.com';
-        $user->password = 'madridsucks';
+        $user->email = 'okro@example';
+        $user->password = 'qwerty';
+
 
         $this->assertTrue($user->save());
     }
+    public function testChange()
+    {
+        $user = User:: find(1);
+        $user->name = 'Steve Smith';
+        $this->assertTrue($user->save());
+    }
 }
+
+
+
+
